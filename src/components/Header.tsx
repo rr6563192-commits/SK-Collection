@@ -59,7 +59,7 @@ const Header: React.FC<HeaderProps> = ({ onOpenSearch, onOpenMobileMenu }) => {
             SK
           </span>
           <span className="text-[10px] sm:text-xs tracking-[0.4em] text-text-primary mt-0.5">
-            COLLECTION
+            COLLECTION ✨
           </span>
         </Link>
 
