@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg-deep text-text-primary font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: #D4AF37;
+    color: #050505;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050505;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #292929;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D4AF37;
+  }
+
+  :focus-visible {
+    outline: 2px solid #D4AF37;
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply text-gold text-xs sm:text-sm tracking-[0.25em] uppercase font-medium;
+  }
+
+  .heading-serif {
+    @apply font-serif tracking-wide;
+  }
+
+  .gold-divider {
+    @apply w-full;
+    height: 1px;
+    background: #D4AF37;
+    opacity: 0.5;
+  }
+
+  .btn-gold-outline {
+    @apply inline-flex items-center justify-center gap-2 border border-gold text-gold bg-transparent
+      px-8 py-3.5 uppercase text-sm tracking-[0.15em] font-medium
+      transition-all duration-300 ease-out hover:bg-gold hover:text-bg-deep;
+  }
+
+  .btn-gold-solid {
+    @apply inline-flex items-center justify-center gap-2 bg-gold text-bg-deep
+      px-8 py-3.5 uppercase text-sm tracking-[0.15em] font-medium
+      transition-all duration-300 ease-out hover:bg-gold-bright hover:shadow-gold;
+  }
+
+  .card-surface {
+    @apply bg-bg-card border border-border transition-all duration-300;
+  }
+
+  .card-surface:hover {
+    @apply border-gold;
+  }
+
+  .input-luxury {
+    @apply w-full bg-bg-input border border-border-input text-text-primary placeholder-text-muted
+      px-4 py-3 text-sm transition-colors duration-200 focus:border-gold outline-none;
+  }
+}
